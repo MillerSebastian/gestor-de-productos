@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SR Store - Tu tienda online</title>
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- Header con información del usuario -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <i class="fas fa-store"></i>
+            SR Store
+          </div>
+          <div
+            class="header-actions"
+            style="display: flex; align-items: center; gap: 15px"
+          >
+            <!-- Selector de idioma -->
+            <select
+              id="langSelector"
+              class="lang-selector"
+              aria-label="Seleccionar idioma"
+            >
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+              <option value="fr">🇫🇷 FR</option>
+              <option value="zh">🇨🇳 中文</option>
+            </select>
+            <!-- Botón modo oscuro -->
+            <button
+              id="darkModeBtn"
+              class="dark-mode-btn"
+              title="Modo oscuro/claro"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+          <div class="user-info hidden" id="userInfo">
+            <span class="user-name" id="currentUser"></span>
+            <button
+              class="update-password-btn"
+              id="updatePasswordBtn"
+              data-i18n="updatePassword"
+              style="display: flex; align-items: center; gap: 8px"
+            >
+              <span data-i18n="updatePassword">Actualizar Contraseña</span>
+            </button>
+            <button
+              class="logout-btn"
+              id="logoutBtn"
+              data-i18n="logout"
+              style="display: flex; align-items: center; gap: 8px"
+            >
+              <span data-i18n="logout">Cerrar Sesión</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h2 data-i18n="loginTitle">
+          <i class="fas fa-user-circle"></i> Iniciar Sesión
+        </h2>
+        <div
+          style="display: flex; justify-content: flex-end; margin-bottom: 10px"
+        >
+          <select
+            id="langSelectorLogin"
+            class="lang-selector"
+            aria-label="Seleccionar idioma"
+          >
+            <option value="es">🇪🇸 ES</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="zh">🇨🇳 中文</option>
+          </select>
+        </div>
+        <form id="loginForm">
+          <div
+            class="login-info-message"
+            data-i18n="loginInfo"
+            style="
+              margin-bottom: 15px;
+              color: #155724;
+              background: #e8f5e8;
+              border: 1px solid #c3e6cb;
+              border-radius: 8px;
+              padding: 10px;
+              font-size: 0.95rem;
+            "
+          >
+            Si es tu primera vez, solo escribe un nombre de usuario y una
+            contraseña para crear tu cuenta.<br />
+            <strong>Requisitos:</strong> Usuario y contraseña de mínimo 8
+            caracteres. La contraseña debe tener al menos una mayúscula.
+          </div>
+          <div class="form-group">
+            <label for="username" data-i18n="loginUser">
+              <i class="fas fa-user"></i> Nombre de Usuario
+            </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Ingresa tu nombre de usuario"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password" data-i18n="loginPass">
+              <i class="fas fa-lock"></i> Contraseña
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Ingresa tu contraseña"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn"
+            style="
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+            data-i18n="loginBtn"
+          >
+            <i class="fas fa-sign-in-alt"></i>
+            <span data-i18n="loginBtn">Iniciar Sesión</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Importación Excel -->
+    <div id="importExcelModal" class="modal">
+      <div class="modal-content">
+        <h2 data-i18n="importExcelTitle">
+          <i class="fas fa-file-excel"></i> Importar Productos desde Excel
+        </h2>
+
+        <!-- Instrucciones -->
+        <div class="instructions-section">
+          <h3>
+            <i class="fas fa-info-circle"></i>
+            <span data-i18n="importExcelInstructions">Instrucciones</span>
+          </h3>
+          <p data-i18n="importExcelInstructions">
+            Tu archivo Excel debe tener las siguientes columnas en este orden:
+          </p>
+          <div class="excel-template">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="productName">Nombre</th>
+                  <th data-i18n="price">Precio</th>
+                  <th data-i18n="quantity">Cantidad</th>
+                  <th data-i18n="category">Categoría</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>iPhone 13</td>
+                  <td>999.99</td>
+                  <td>10</td>
+                  <td>electronica</td>
+                </tr>
+                <tr>
+                  <td>Camiseta Básica</td>
+                  <td>25.50</td>
+                  <td>50</td>
+                  <td>ropa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="category-codes">
+            <h4 data-i18n="importExcelCategories">Códigos de Categorías:</h4>
+            <ul>
+              <li>
+                <strong>electronica</strong> -
+                <span data-i18n="category">Electrónica</span>
+              </li>
+              <li>
+                <strong>ropa</strong> - <span data-i18n="category">Ropa</span>
+              </li>
+              <li>
+                <strong>hogar</strong> - <span data-i18n="category">Hogar</span>
+              </li>
+              <li>
+                <strong>deportes</strong> -
+                <span data-i18n="category">Deportes</span>
+              </li>
+              <li>
+                <strong>libros</strong> -
+                <span data-i18n="category">Libros</span>
+              </li>
+              <li>
+                <strong>juguetes</strong> -
+                <span data-i18n="category">Juguetes</span>
+              </li>
+              <li>
+                <strong>belleza</strong> -
+                <span data-i18n="category">Belleza</span>
+              </li>
+              <li>
+                <strong>automovil</strong> -
+                <span data-i18n="category">Automóvil</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Input de archivo -->
+        <div class="file-input-section">
+          <label
+            for="excelFile"
+            class="file-input-label"
+            data-i18n="importExcelSelect"
+          >
+            <i class="fas fa-upload"></i>
+            Seleccionar archivo Excel (.xlsx, .xls)
+          </label>
+          <input
+            type="file"
+            id="excelFile"
+            accept=".xlsx,.xls"
+            style="display: none"
+          />
+          <div id="fileInfo" class="file-info hidden"></div>
+        </div>
+
+        <!-- Botones -->
+        <div class="modal-actions">
+          <button
+            type="button"
+            class="btn btn-success"
+            id="processExcelBtn"
+            disabled
+            data-i18n="importExcelProcess"
+            style="display: flex; align-items: center; gap: 8px"
+          >
+            <i class="fas fa-check"></i>
+            <span data-i18n="importExcelProcess">Procesar Archivo</span>
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="cancelImportBtn"
+            data-i18n="importExcelCancel"
+            style="display: flex; align-items: center; gap: 8px"
+          >
+            <i class="fas fa-times"></i>
+            <span data-i18n="importExcelCancel">Cancelar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Actualizar Contraseña -->
+    <div id="updatePasswordModal" class="modal">
+      <div class="modal-content">
+        <h2 data-i18n="updatePasswordTitle">
+          <i class="fas fa-key"></i> Actualizar Contraseña
+        </h2>
+        <form id="updatePasswordForm">
+          <div class="form-group">
+            <label for="currentPassword" data-i18n="currentPassword">
+              <i class="fas fa-lock"></i> Contraseña Actual
+            </label>
+            <input
+              type="password"
+              id="currentPassword"
+              name="currentPassword"
+              required
+              placeholder=""
+              data-i18n="currentPassword"
+            />
+          </div>
+          <div class="form-group">
+            <label for="newPassword" data-i18n="newPassword">
+              <i class="fas fa-lock"></i> Nueva Contraseña
+            </label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              required
+              placeholder=""
+              data-i18n="newPassword"
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword" data-i18n="confirmPassword">
+              <i class="fas fa-lock"></i> Confirmar Nueva Contraseña
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+              placeholder=""
+              data-i18n="confirmPassword"
+            />
+          </div>
+          <div class="modal-actions">
+            <button
+              type="submit"
+              class="btn btn-success"
+              data-i18n="saveChanges"
+              style="display: flex; align-items: center; gap: 8px"
+            >
+              <i class="fas fa-check"></i>
+              <span data-i18n="saveChanges">Guardar Cambios</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="cancelUpdatePasswordBtn"
+              data-i18n="importExcelCancel"
+              style="display: flex; align-items: center; gap: 8px"
+            >
+              <i class="fas fa-times"></i>
+              <span data-i18n="importExcelCancel">Cancelar</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="container hidden" id="mainContent">
+      <!-- Alertas -->
+      <div id="alertContainer"></div>
+
+      <!-- Estadísticas -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="totalProducts">0</div>
+          <div class="stat-label" data-i18n="statsTotal">
+            <i class="fas fa-boxes"></i> Total Productos
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalValue">$0</div>
+          <div class="stat-label" data-i18n="statsValue">
+            <i class="fas fa-dollar-sign"></i> Valor Total
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalCategories">0</div>
+          <div class="stat-label" data-i18n="statsCategories">
+            <i class="fas fa-tags"></i> Categorías
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="lowStock">0</div>
+          <div class="stat-label" data-i18n="statsLowStock">
+            <i class="fas fa-exclamation-triangle"></i> Stock Bajo
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulario de Productos -->
+      <section class="product-form">
+        <h2 class="section-title" data-i18n="addProduct">
+          <i class="fas fa-plus-circle"></i> Agregar Producto
+        </h2>
+        <form id="productForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="productName" data-i18n="productName">
+                <i class="fas fa-tag"></i> Nombre del Producto
+              </label>
+              <input
+                type="text"
+                id="productName"
+                name="productName"
+                required
+                placeholder="Ej: iPhone 13"
+              />
+            </div>
+            <div class="form-group">
+              <label for="productPrice" data-i18n="price">
+                <i class="fas fa-dollar-sign"></i> Precio
+              </label>
+              <input
+                type="number"
+                id="productPrice"
+                name="productPrice"
+                step="0.01"
+                min="0"
+                required
+                placeholder="0.00"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="productQuantity" data-i18n="quantity">
+                <i class="fas fa-cubes"></i> Cantidad
+              </label>
+              <input
+                type="number"
+                id="productQuantity"
+                name="productQuantity"
+                min="0"
+                required
+                placeholder="0"
+              />
+            </div>
+            <div class="form-group">
+              <label for="productCategory" data-i18n="category">
+                <i class="fas fa-list"></i> Categoría
+              </label>
+              <select id="productCategory" name="productCategory" required>
+                <option value="" data-i18n="selectCategory">
+                  Selecciona una categoría
+                </option>
+                <option value="electronica">Electrónica</option>
+                <option value="ropa">Ropa</option>
+                <option value="hogar">Hogar</option>
+                <option value="deportes">Deportes</option>
+                <option value="libros">Libros</option>
+                <option value="juguetes">Juguetes</option>
+                <option value="belleza">Belleza</option>
+                <option value="automovil">Automóvil</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success" data-i18n="addProduct">
+            <i class="fas fa-plus"></i>
+            Agregar Producto
+          </button>
+        </form>
+
+        <!-- Botones de Excel -->
+        <div class="excel-actions">
+          <button
+            type="button"
+            class="btn btn-info"
+            id="importExcelBtn"
+            data-i18n="importExcel"
+            style="display: flex; align-items: center; gap: 8px"
+          >
+            <span data-i18n="importExcel">Importar Excel</span>
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning"
+            id="exportExcelBtn"
+            data-i18n="exportExcel"
+            style="display: flex; align-items: center; gap: 8px"
+          >
+            <span data-i18n="exportExcel">Exportar Excel</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Lista de Productos -->
+      <section class="products-section">
+        <h2 class="section-title" data-i18n="myProducts">
+          <i class="fas fa-inventory"></i> Mis Productos
+        </h2>
+        <div class="products-grid" id="productsGrid">
+          <!-- Los productos se cargarán aquí dinámicamente -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Botón flotante para el tour interactivo -->
+    <button
+      id="helpTourBtn"
+      class="help-tour-btn"
+      style="display: none"
+      data-i18n="tourHelp"
+    >
+      <span data-i18n="tourHelp">¿Cómo funciona?</span>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <p data-i18n="rights">
+              &copy; 2025 SR Store. Todos los derechos reservados | Por
+              Sebastian Rodelo Riwi Coder | hecho con el 💜 y mucho codigo.
+              <i class="fa fas-code"></i>
+            </p>
+          </div>
+          <div class="footer-links">
+            <a
+              href="https://github.com/MillerSebastian"
+              data-i18n="contact"
+              style="display: flex; align-items: center; gap: 6px"
+              target="_blank"
+              ><span data-i18n="contact">Contacto</span></a
+            >
+            <a
+              href="#"
+              data-i18n="help"
+              style="display: flex; align-items: center; gap: 6px"
+              ><span data-i18n="help">Ayuda</span></a
+            >
+            <a
+              href="#"
+              data-i18n="privacy"
+              style="display: flex; align-items: center; gap: 6px"
+              ><span data-i18n="privacy">Privacidad</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SheetJS para manejo de Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
