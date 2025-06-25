@@ -1,42 +1,9 @@
-# Resumen del desarrollo y mejoras de SR Store
-
-Durante la conversación, se trabajó en el desarrollo de una aplicación web llamada **SR Store** para la gestión de inventario de productos. Se realizaron las siguientes acciones y mejoras:
-
-1. **Corrección de errores y mejoras funcionales:**
-
-   - Corrección en el guardado de cantidad y precio de productos, y el cálculo del total.
-   - Mejora del margen entre el header y el main, y reemplazo de prompts/confirm nativos por alertas personalizadas.
-   - Implementación de un sistema de notificaciones tipo modal, apilables y con buen diseño.
-   - Limitación de la visualización de tarjetas de productos a dos filas con scroll y un indicador visual.
-   - Agregado de botones para importar/exportar productos en Excel, con un modal de instrucciones y validación.
-   - Integración de la librería SheetJS para el manejo de archivos Excel.
-   - Implementación de la importación/exportación multilingüe de productos, con validación y confirmaciones.
-   - Añadida funcionalidad de actualización de contraseña con validaciones de seguridad.
-   - Creación de un tour interactivo (burbujas de ayuda) que aparece la primera vez y luego mediante un botón flotante.
-   - Implementación de un modo oscuro completo y un selector de idioma (español, inglés, francés, chino), ambos en la barra superior y sincronizados con el login.
-   - Traducción de todos los textos clave de la interfaz, incluyendo formularios, modales, alertas, tour, footer y categorías.
-   - Exportación a Excel usando los nombres de las categorías en el idioma seleccionado.
-
-2. **Mejoras visuales y de accesibilidad:**
-
-   - Mejora del contraste y la legibilidad en modo oscuro (inputs, selects, tablas, botones, etc.).
-   - Centrado del botón de "Iniciar Sesión".
-   - Eliminación de los iconos de Font Awesome por problemas de visualización y compatibilidad.
-   - Personalización del footer con un mensaje especial del usuario.
-
-3. **Documentación:**
-
-   - Generación de un README completo y profesional, con secciones de descripción, características, instalación, uso, internacionalización, modo oscuro, importación/exportación Excel, tecnologías, agradecimientos y contacto.
-   - Sugerencia y explicación sobre cómo agregar imágenes y badges (por ejemplo, logos de HTML, CSS, JS) en el README, con ejemplos de uso de SVGs y Shields.io.
-
-4. **Soporte y personalización:**
-   - Corrección de errores ortográficos en las traducciones.
-   - Ajuste de detalles visuales y de traducción según el feedback del usuario.
-   - Preparación de la app para futuras personalizaciones, especialmente en el footer.
-
-En resumen, la conversación cubrió el desarrollo, mejora, internacionalización, accesibilidad, documentación y personalización de una app de inventario web, asegurando que sea moderna, multilingüe, usable y lista para producción.
-
-# SR Store
+# SR Store 
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
 **SR Store** es una aplicación web moderna para la gestión de inventario de productos, pensada para pequeñas y medianas empresas, tiendas o cualquier persona que necesite llevar un control eficiente y visual de sus productos.
 
