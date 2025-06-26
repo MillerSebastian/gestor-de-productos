@@ -116,7 +116,8 @@
               id="username"
               name="username"
               required
-              placeholder="Ingresa tu nombre de usuario"
+              placeholder=""
+              data-i18n="loginUserPlaceholder"
             />
           </div>
           <div class="form-group">
@@ -128,7 +129,8 @@
               id="password"
               name="password"
               required
-              placeholder="Ingresa tu contraseña"
+              placeholder=""
+              data-i18n="loginPassPlaceholder"
             />
           </div>
           <button
@@ -435,20 +437,70 @@
                 <option value="" data-i18n="selectCategory">
                   Selecciona una categoría
                 </option>
-                <option value="electronica">Electrónica</option>
-                <option value="ropa">Ropa</option>
-                <option value="hogar">Hogar</option>
-                <option value="deportes">Deportes</option>
-                <option value="libros">Libros</option>
-                <option value="juguetes">Juguetes</option>
-                <option value="belleza">Belleza</option>
-                <option value="automovil">Automóvil</option>
+                <option value="electronica" data-i18n="categoryElectronica">
+                  Electrónica
+                </option>
+                <option value="ropa" data-i18n="categoryRopa">Ropa</option>
+                <option value="hogar" data-i18n="categoryHogar">Hogar</option>
+                <option value="deportes" data-i18n="categoryDeportes">
+                  Deportes
+                </option>
+                <option value="libros" data-i18n="categoryLibros">
+                  Libros
+                </option>
+                <option value="juguetes" data-i18n="categoryJuguetes">
+                  Juguetes
+                </option>
+                <option value="belleza" data-i18n="categoryBelleza">
+                  Belleza
+                </option>
+                <option value="automovil" data-i18n="categoryAutomovil">
+                  Automóvil
+                </option>
               </select>
+              <!-- NUEVO: Input para agregar categoría personalizada -->
+              <div
+                class="form-group"
+                id="customCategoryGroup"
+                style="
+                  margin-top: 8px;
+                  display: flex;
+                  gap: 6px;
+                  align-items: center;
+                  background: #f8f9fa;
+                  border-radius: 6px;
+                  padding: 6px 10px 6px 6px;
+                "
+              >
+                <input
+                  type="text"
+                  id="newCategoryInput"
+                  placeholder="Nueva categoría"
+                  data-i18n-placeholder="newCategoryPlaceholder"
+                  style="
+                    flex: 1;
+                    min-width: 0;
+                    border-radius: 4px;
+                    border: 1px solid #ddd;
+                    padding: 7px 10px;
+                    font-size: 0.98rem;
+                  "
+                  maxlength="20"
+                />
+                <button
+                  type="button"
+                  id="addCategoryBtn"
+                  class="btn btn-success"
+                  style="padding: 7px 12px; min-width: 36px; font-size: 1rem"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-success" data-i18n="addProduct">
+          <button type="submit" class="btn btn-success">
             <i class="fas fa-plus"></i>
-            Agregar Producto
+            <span data-i18n="addProduct">Agregar Producto</span>
           </button>
         </form>
 

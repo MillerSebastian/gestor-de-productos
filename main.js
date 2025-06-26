@@ -49,6 +49,14 @@ const translations = {
     loginBtn: "Iniciar Sesión",
     loginInfo:
       "Si es tu primera vez, solo escribe un nombre de usuario y una contraseña para crear tu cuenta.<br><strong>Requisitos:</strong> Usuario y contraseña de mínimo 8 caracteres. La contraseña debe tener al menos una mayúscula.",
+    // Placeholders del login
+    loginUserPlaceholder: "Ingresa tu nombre de usuario",
+    loginPassPlaceholder: "Ingresa tu contraseña",
+    // Botones de confirmación
+    yes: "Sí",
+    no: "No",
+    // Botones de formulario
+    updateProduct: "Actualizar Producto",
     // Tour
     tourStep1:
       'Aquí puedes agregar nuevos productos llenando el formulario y haciendo clic en "Agregar Producto".',
@@ -65,7 +73,7 @@ const translations = {
     tourPrev: "Anterior",
     tourClose: "Cerrar",
     tourHelp: "¿Cómo funciona?",
-    // Botones de tarjetas
+    // Card buttons
     edit: "Editar",
     delete: "Eliminar",
     // Footer
@@ -110,7 +118,23 @@ const translations = {
     alertPasswordUpdated: "Contraseña actualizada exitosamente.",
     confirmDelete: '¿Estás seguro de que quieres eliminar "{name}"?',
     confirmImport: "¿Estás seguro de que quieres importar {count} productos?",
+    // Categorías
+    categoryElectronica: "Electrónica",
+    categoryRopa: "Ropa",
+    categoryHogar: "Hogar",
+    categoryDeportes: "Deportes",
+    categoryLibros: "Libros",
+    categoryJuguetes: "Juguetes",
+    categoryBelleza: "Belleza",
+    categoryAutomovil: "Automóvil",
+    // Validación nombre único
+    alertProductNameUnique: "El nombre del producto ya existe. Debe ser único.",
     // ...otros textos clave...
+    newCategoryPlaceholder: "Nueva categoría",
+    alertCustomCategoryShort:
+      "El nombre de la categoría debe tener al menos 2 caracteres.",
+    alertCustomCategoryExists: "La categoría ya existe o es inválida.",
+    alertCustomCategoryAdded: "¡Categoría agregada!",
   },
   en: {
     addProduct: "Add Product",
@@ -134,6 +158,14 @@ const translations = {
     loginBtn: "Sign In",
     loginInfo:
       "If this is your first time, just enter a username and password to create your account.<br><strong>Requirements:</strong> Username and password at least 8 characters. Password must have at least one uppercase letter.",
+    // Placeholders del login
+    loginUserPlaceholder: "Enter your username",
+    loginPassPlaceholder: "Enter your password",
+    // Botones de confirmación
+    yes: "Yes",
+    no: "No",
+    // Botones de formulario
+    updateProduct: "Update Product",
     // Tour
     tourStep1:
       'Here you can add new products by filling out the form and clicking "Add Product".',
@@ -191,9 +223,26 @@ const translations = {
     alertPasswordMatch: "Passwords do not match.",
     alertPasswordDiff: "New password must be different from the current one.",
     alertPasswordUpdated: "Password updated successfully.",
-    confirmDelete: 'Are you sure you want to delete "{name}"?',
+    confirmDelete: 'Are you sure you want to delete "{name}" ?',
     confirmImport: "Are you sure you want to import {count} products?",
-    // ...
+    // Categorías
+    categoryElectronica: "Electronics",
+    categoryRopa: "Clothing",
+    categoryHogar: "Home",
+    categoryDeportes: "Sports",
+    categoryLibros: "Books",
+    categoryJuguetes: "Toys",
+    categoryBelleza: "Beauty",
+    categoryAutomovil: "Automobile",
+    // Validación nombre único
+    alertProductNameUnique:
+      "The product name already exists. It must be unique.",
+    // Categorías personalizadas
+    newCategoryPlaceholder: "New category",
+    alertCustomCategoryShort:
+      "The category name must have at least 2 characters.",
+    alertCustomCategoryExists: "The category already exists or is invalid.",
+    alertCustomCategoryAdded: "Category added!",
   },
   fr: {
     addProduct: "Ajouter un produit",
@@ -217,6 +266,14 @@ const translations = {
     loginBtn: "Connexion",
     loginInfo:
       "Pour la première fois, entrez simplement un nom d'utilisateur et un mot de passe pour créer votre compte.<br><strong>Exigences :</strong> Nom d'utilisateur et mot de passe d'au moins 8 caractères. Le mot de passe doit comporter au moins une majuscule.",
+    // Placeholders del login
+    loginUserPlaceholder: "Entrez votre nom d'utilisateur",
+    loginPassPlaceholder: "Entrez votre mot de passe",
+    // Botones de confirmación
+    yes: "Oui",
+    no: "Non",
+    // Botones de formulario
+    updateProduct: "Mettre à jour le produit",
     // Tour
     tourStep1:
       'Ici, vous pouvez ajouter de nouveaux produits en remplissant le formulaire puis en cliquant sur "Ajouter un produit".',
@@ -279,7 +336,24 @@ const translations = {
     alertPasswordUpdated: "Mot de passe mis à jour avec succès.",
     confirmDelete: 'Êtes-vous sûr de vouloir supprimer "{name}" ?',
     confirmImport: "Êtes-vous sûr de vouloir importer {count} produits ?",
-    // ...
+    // Categorías
+    categoryElectronica: "Électronique",
+    categoryRopa: "Vêtements",
+    categoryHogar: "Maison",
+    categoryDeportes: "Sports",
+    categoryLibros: "Livres",
+    categoryJuguetes: "Jouets",
+    categoryBelleza: "Beauté",
+    categoryAutomovil: "Automobile",
+    // Validación nombre único
+    alertProductNameUnique:
+      "Le nom du produit existe déjà. Il doit être unique.",
+    // Categorías personalizadas
+    newCategoryPlaceholder: "Nouvelle catégorie",
+    alertCustomCategoryShort:
+      "Le nom de la catégorie doit comporter au moins 2 caractères.",
+    alertCustomCategoryExists: "La catégorie existe déjà ou est invalide.",
+    alertCustomCategoryAdded: "Catégorie ajoutée !",
   },
   zh: {
     addProduct: "添加产品",
@@ -303,6 +377,14 @@ const translations = {
     loginBtn: "登录",
     loginInfo:
       "首次使用时，只需输入用户名和密码即可创建账户。<br><strong>要求：</strong>用户名和密码至少8个字符，密码需包含至少一个大写字母。",
+    // Placeholders del login
+    loginUserPlaceholder: "请输入用户名",
+    loginPassPlaceholder: "请输入密码",
+    // Botones de confirmación
+    yes: "是",
+    no: "否",
+    // Botones de formulario
+    updateProduct: "更新产品",
     // Tour
     tourStep1: '在这里填写表单并点击"添加产品"即可添加新产品。',
     tourStep2: "使用这些按钮可以从Excel导入产品或导出当前库存。",
@@ -357,7 +439,22 @@ const translations = {
     alertPasswordUpdated: "密码更新成功。",
     confirmDelete: '你确定要删除"{name}"吗？',
     confirmImport: "你确定要导入{count}个产品吗？",
-    // ...
+    // Categorías
+    categoryElectronica: "电子产品",
+    categoryRopa: "服装",
+    categoryHogar: "家居",
+    categoryDeportes: "运动",
+    categoryLibros: "书籍",
+    categoryJuguetes: "玩具",
+    categoryBelleza: "美妆",
+    categoryAutomovil: "汽车",
+    // Validación nombre único
+    alertProductNameUnique: "产品名称已存在。必须是唯一的。",
+    // Categorías personalizadas
+    newCategoryPlaceholder: "新类别",
+    alertCustomCategoryShort: "类别名称至少需要2个字符。",
+    alertCustomCategoryExists: "类别已存在或无效。",
+    alertCustomCategoryAdded: "类别已添加！",
   },
 };
 
@@ -391,6 +488,8 @@ const elements = {
   updatePasswordModal: document.getElementById("updatePasswordModal"),
   updatePasswordForm: document.getElementById("updatePasswordForm"),
   cancelUpdatePasswordBtn: document.getElementById("cancelUpdatePasswordBtn"),
+  // Botón de ayuda
+  helpTourBtn: document.getElementById("helpTourBtn"),
 };
 
 // Tour interactivo
@@ -480,7 +579,8 @@ function showTour(stepIndex = 0) {
       showTour(stepIndex - 1);
   bubble.querySelector(".close-tour-btn").onclick = () => {
     removeTourBubble();
-    helpTourBtn.style.display = "block";
+    // Mostrar botón de ayuda solo si no hay modales activos
+    updateHelpButtonVisibility();
     localStorage.setItem(TOUR_KEY, "true");
   };
 }
@@ -493,11 +593,16 @@ window.addEventListener("DOMContentLoaded", () => {
   if (currentUser && !localStorage.getItem(TOUR_KEY)) {
     setTimeout(() => showTour(0), 800);
   } else {
-    helpTourBtn.style.display = "block";
+    // Mostrar botón de ayuda solo si no hay modales activos
+    updateHelpButtonVisibility();
   }
 });
 // Botón flotante para relanzar el tour
-helpTourBtn.addEventListener("click", () => showTour(0));
+helpTourBtn.addEventListener("click", () => {
+  // Ocultar el botón mientras el tour esté activo
+  helpTourBtn.style.display = "none";
+  showTour(0);
+});
 
 // ===== CLASE PARA MANEJO DE ALMACENAMIENTO =====
 class StorageManager {
@@ -753,10 +858,10 @@ class UIManager {
       </div>
       <div style="display: flex; gap: 10px;">
         <button class="btn btn-sm btn-success" id="confirmYes">
-          <i class="fas fa-check"></i> Sí
+          <i class="fas fa-check"></i> ${getTranslation("yes")}
         </button>
         <button class="btn btn-sm btn-danger" id="confirmNo">
-          <i class="fas fa-times"></i> No
+          <i class="fas fa-times"></i> ${getTranslation("no")}
         </button>
       </div>
     `;
@@ -884,14 +989,32 @@ class UIManager {
     const card = document.createElement("div");
     card.className = "product-card";
 
-    const category = CONFIG.CATEGORIES[product.category];
+    let category = CONFIG.CATEGORIES[product.category];
+    const isCustom = product.category.startsWith("custom_");
     const isLowStock = parseInt(product.quantity) < 5;
+
+    // Obtener traducción de la categoría o mostrar personalizada
+    let categoryTranslation = "";
+    let categoryIcon = "";
+    if (isCustom) {
+      // Extraer el nombre real de la categoría personalizada
+      const customName = product.category.replace("custom_", "");
+      categoryTranslation = `<span class='custom-category-label'>${customName}</span>`;
+      categoryIcon = "<i class='fas fa-tag'></i>";
+    } else {
+      categoryTranslation = getTranslation(
+        `category${
+          product.category.charAt(0).toUpperCase() + product.category.slice(1)
+        }`
+      );
+      categoryIcon = `<i class='${category.icon}'></i>`;
+    }
 
     card.innerHTML = `
                     <div class="product-header">
                         <div>
                             <div class="product-name">
-                                <i class="${category.icon}"></i>
+                                ${categoryIcon}
                                 ${product.name}
                             </div>
                             ${
@@ -900,7 +1023,7 @@ class UIManager {
                                 : ""
                             }
                         </div>
-                        <div class="product-category">${category.name}</div>
+                        <div class="product-category">${categoryTranslation}</div>
                     </div>
                     <div class="product-details">
                         <div class="product-price">${parseFloat(
@@ -940,7 +1063,9 @@ class UIManager {
     const submitBtn = elements.productForm.querySelector(
       'button[type="submit"]'
     );
-    submitBtn.innerHTML = '<i class="fas fa-plus"></i> Agregar Producto';
+    submitBtn.innerHTML = `<i class="fas fa-plus"></i> ${getTranslation(
+      "addProduct"
+    )}`;
     submitBtn.className = "btn btn-success";
   }
 
@@ -959,7 +1084,9 @@ class UIManager {
     const submitBtn = elements.productForm.querySelector(
       'button[type="submit"]'
     );
-    submitBtn.innerHTML = '<i class="fas fa-save"></i> Actualizar Producto';
+    submitBtn.innerHTML = `<i class="fas fa-save"></i> ${getTranslation(
+      "updateProduct"
+    )}`;
     submitBtn.className = "btn btn-success";
 
     // Scroll hacia el formulario
@@ -972,6 +1099,8 @@ class UIManager {
   static showImportExcelModal() {
     elements.importExcelModal.style.display = "block";
     this.clearExcelForm();
+    // Ocultar botón de ayuda
+    updateHelpButtonVisibility();
   }
 
   /**
@@ -980,6 +1109,8 @@ class UIManager {
   static hideImportExcelModal() {
     elements.importExcelModal.style.display = "none";
     this.clearExcelForm();
+    // Mostrar botón de ayuda si no hay otros modales activos
+    updateHelpButtonVisibility();
   }
 
   /**
@@ -1400,6 +1531,24 @@ function setupEventListeners() {
         }
       } else if (elements.importExcelModal.style.display === "block") {
         UIManager.hideImportExcelModal();
+      } else if (elements.updatePasswordModal.style.display === "block") {
+        elements.updatePasswordModal.style.display = "none";
+        // Mostrar botón de ayuda si no hay otros modales activos
+        updateHelpButtonVisibility();
+      }
+    }
+  });
+
+  // Event listener para cerrar modales haciendo clic fuera de ellos
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal")) {
+      if (elements.loginModal.style.display === "block" && currentUser) {
+        hideLoginModal();
+      } else if (elements.importExcelModal.style.display === "block") {
+        UIManager.hideImportExcelModal();
+      } else if (elements.updatePasswordModal.style.display === "block") {
+        elements.updatePasswordModal.style.display = "none";
+        updateHelpButtonVisibility();
       }
     }
   });
@@ -1408,11 +1557,15 @@ function setupEventListeners() {
   elements.updatePasswordBtn.addEventListener("click", () => {
     elements.updatePasswordModal.style.display = "block";
     elements.updatePasswordForm.reset();
+    // Ocultar botón de ayuda
+    updateHelpButtonVisibility();
   });
 
   // Ocultar modal
   elements.cancelUpdatePasswordBtn.addEventListener("click", () => {
     elements.updatePasswordModal.style.display = "none";
+    // Mostrar botón de ayuda si no hay otros modales activos
+    updateHelpButtonVisibility();
   });
 
   // Validar y actualizar contraseña
@@ -1450,6 +1603,8 @@ function setupEventListeners() {
     users[currentUser].password = nueva;
     StorageManager.set(CONFIG.STORAGE_KEYS.USERS, users);
     elements.updatePasswordModal.style.display = "none";
+    // Mostrar botón de ayuda si no hay otros modales activos
+    updateHelpButtonVisibility();
     UIManager.showAlert(getTranslation("alertPasswordUpdated"), "success");
   });
 }
@@ -1607,6 +1762,18 @@ function validateProductData(data) {
     return false;
   }
 
+  // Validar nombre único (ignorando mayúsculas/minúsculas)
+  const userProducts = ProductManager.getUserProducts();
+  const nameLower = data.productName.trim().toLowerCase();
+  const isDuplicate = userProducts.some(
+    (p) =>
+      p.name.trim().toLowerCase() === nameLower && p.id !== editingProductId
+  );
+  if (isDuplicate) {
+    UIManager.showAlert(getTranslation("alertProductNameUnique"), "danger");
+    return false;
+  }
+
   return true;
 }
 
@@ -1687,6 +1854,8 @@ function showLoginModal() {
   setTimeout(() => {
     document.getElementById("username").focus();
   }, 100);
+  // Ocultar botón de ayuda
+  updateHelpButtonVisibility();
 }
 
 /**
@@ -1694,6 +1863,8 @@ function showLoginModal() {
  */
 function hideLoginModal() {
   elements.loginModal.style.display = "none";
+  // Mostrar botón de ayuda si no hay otros modales activos
+  updateHelpButtonVisibility();
 }
 
 /**
@@ -1707,6 +1878,12 @@ function showMainContent() {
 
   // Cargar y mostrar productos
   loadUserData();
+
+  // Mostrar botón de ayuda
+  updateHelpButtonVisibility();
+
+  // Actualizar categorías en el select
+  updateCategoryOptions(localStorage.getItem(LANG_KEY) || "es");
 }
 
 /**
@@ -1716,6 +1893,9 @@ function hideMainContent() {
   elements.mainContent.classList.add("hidden");
   elements.userInfo.classList.add("hidden");
   UIManager.clearProductForm();
+
+  // Ocultar botón de ayuda
+  updateHelpButtonVisibility();
 }
 
 /**
@@ -1725,7 +1905,8 @@ function loadUserData() {
   try {
     products = ProductManager.getUserProducts();
     UIManager.renderProducts();
-
+    // Actualizar categorías en el select
+    updateCategoryOptions(localStorage.getItem(LANG_KEY) || "es");
     // Mostrar mensaje de bienvenida si es la primera vez
     if (products.length === 0) {
       setTimeout(() => {
@@ -1835,6 +2016,11 @@ function setLang(lang) {
   document.documentElement.setAttribute("lang", lang);
   updateTexts(lang);
   updateCategoryOptions(lang);
+  // Forzar traducción del placeholder de nueva categoría
+  const newCatInput = document.getElementById("newCategoryInput");
+  if (newCatInput) {
+    newCatInput.placeholder = getTranslation("newCategoryPlaceholder");
+  }
 }
 
 function updateTexts(lang) {
@@ -1848,6 +2034,28 @@ function updateTexts(lang) {
       }
     }
   });
+  // NUEVO: traducir placeholder de nueva categoría
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+  // Actualizar botones de formulario específicos
+  const submitBtn = document.querySelector(
+    '#productForm button[type="submit"]'
+  );
+  if (submitBtn) {
+    if (editingProductId) {
+      submitBtn.innerHTML = `<i class=\"fas fa-save\"></i> ${getTranslation(
+        "updateProduct"
+      )}`;
+    } else {
+      submitBtn.innerHTML = `<i class=\"fas fa-plus\"></i> ${getTranslation(
+        "addProduct"
+      )}`;
+    }
+  }
 }
 
 const langSelector = document.getElementById("langSelector");
@@ -1871,12 +2079,13 @@ if (langSelectorLogin) {
 }
 
 // Al cambiar el idioma principal, sincronizar el del login
-langSelector.addEventListener("change", (e) => {
+document.getElementById("langSelector").addEventListener("change", (e) => {
   setLang(e.target.value);
-  if (langSelectorLogin) langSelectorLogin.value = e.target.value;
   if (typeof UIManager !== "undefined" && UIManager.renderProducts) {
     UIManager.renderProducts();
   }
+  updateCategoryOptions(e.target.value);
+  updateTexts(e.target.value); // Traducir placeholder y textos
 });
 
 // Al cargar la página, sincronizar ambos selectores
@@ -1934,12 +2143,243 @@ const categoryNames = {
 function updateCategoryOptions(lang) {
   const select = document.getElementById("productCategory");
   if (!select) return;
-  const options = select.querySelectorAll("option");
-  // Primera opción es el placeholder
-  options[0].textContent = translations[lang].selectCategory;
-  // Las demás son las categorías
-  const keys = Object.keys(categoryNames[lang]);
-  for (let i = 0; i < keys.length; i++) {
-    options[i + 1].textContent = categoryNames[lang][keys[i]];
+  // Guardar valor seleccionado
+  const prevValue = select.value;
+  // Limpiar opciones
+  select.innerHTML = "";
+  // Placeholder
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.setAttribute("data-i18n", "selectCategory");
+  placeholder.textContent = getTranslation("selectCategory");
+  select.appendChild(placeholder);
+  // Globales
+  const categoryKeys = [
+    "electronica",
+    "ropa",
+    "hogar",
+    "deportes",
+    "libros",
+    "juguetes",
+    "belleza",
+    "automovil",
+  ];
+  for (const key of categoryKeys) {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.setAttribute(
+      "data-i18n",
+      `category${key.charAt(0).toUpperCase() + key.slice(1)}`
+    );
+    opt.textContent = getTranslation(
+      `category${key.charAt(0).toUpperCase() + key.slice(1)}`
+    );
+    select.appendChild(opt);
+  }
+  // Personalizadas
+  const custom = getUserCustomCategories();
+  for (const cat of custom) {
+    const opt = document.createElement("option");
+    opt.value = `custom_${cat}`;
+    opt.textContent = cat;
+    opt.className = "custom-category-option";
+    select.appendChild(opt);
+  }
+  // Restaurar valor seleccionado si existe
+  if ([...select.options].some((o) => o.value === prevValue)) {
+    select.value = prevValue;
   }
 }
+
+// ===== FUNCIONES PARA MANEJAR VISIBILIDAD DEL BOTÓN DE AYUDA =====
+
+/**
+ * Oculta el botón de ayuda
+ */
+function hideHelpButton() {
+  if (helpTourBtn) {
+    helpTourBtn.style.display = "none";
+  }
+}
+
+/**
+ * Muestra el botón de ayuda
+ */
+function showHelpButton() {
+  if (helpTourBtn && currentUser) {
+    helpTourBtn.style.display = "flex";
+  }
+}
+
+/**
+ * Verifica si algún modal está activo
+ * @returns {boolean} True si algún modal está visible
+ */
+function isAnyModalActive() {
+  return (
+    elements.loginModal.style.display === "block" ||
+    elements.importExcelModal.style.display === "block" ||
+    elements.updatePasswordModal.style.display === "block"
+  );
+}
+
+/**
+ * Actualiza la visibilidad del botón de ayuda basado en el estado de los modales
+ */
+function updateHelpButtonVisibility() {
+  if (isAnyModalActive()) {
+    hideHelpButton();
+  } else {
+    showHelpButton();
+  }
+}
+
+// ===== CATEGORÍAS PERSONALIZADAS POR USUARIO =====
+function getUserCustomCategories() {
+  if (!currentUser) return [];
+  return StorageManager.get(`srstore_custom_categories_${currentUser}`, []);
+}
+
+function saveUserCustomCategories(categories) {
+  if (!currentUser) return;
+  StorageManager.set(`srstore_custom_categories_${currentUser}`, categories);
+}
+
+function addCustomCategory(name) {
+  const trimmed = name.trim();
+  if (!trimmed) return false;
+  const categories = getUserCustomCategories();
+  // No permitir duplicados (ignorando mayúsculas)
+  if (categories.some((cat) => cat.toLowerCase() === trimmed.toLowerCase()))
+    return false;
+  categories.push(trimmed);
+  saveUserCustomCategories(categories);
+  return true;
+}
+
+// ===== SIEMPRE ACTUALIZAR EL SELECT DE CATEGORÍAS CORRECTAMENTE =====
+function updateCategoryOptions(lang) {
+  const select = document.getElementById("productCategory");
+  if (!select) return;
+  // Guardar valor seleccionado
+  const prevValue = select.value;
+  // Limpiar opciones
+  select.innerHTML = "";
+  // Placeholder
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.setAttribute("data-i18n", "selectCategory");
+  placeholder.textContent = getTranslation("selectCategory");
+  select.appendChild(placeholder);
+  // Globales
+  const categoryKeys = [
+    "electronica",
+    "ropa",
+    "hogar",
+    "deportes",
+    "libros",
+    "juguetes",
+    "belleza",
+    "automovil",
+  ];
+  for (const key of categoryKeys) {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.setAttribute(
+      "data-i18n",
+      `category${key.charAt(0).toUpperCase() + key.slice(1)}`
+    );
+    opt.textContent = getTranslation(
+      `category${key.charAt(0).toUpperCase() + key.slice(1)}`
+    );
+    select.appendChild(opt);
+  }
+  // Personalizadas
+  const custom = getUserCustomCategories();
+  for (const cat of custom) {
+    const opt = document.createElement("option");
+    opt.value = `custom_${cat}`;
+    opt.textContent = cat;
+    opt.className = "custom-category-option";
+    select.appendChild(opt);
+  }
+  // Restaurar valor seleccionado si existe
+  if ([...select.options].some((o) => o.value === prevValue)) {
+    select.value = prevValue;
+  }
+}
+
+// ===== EVENTO PARA AGREGAR CATEGORÍA PERSONALIZADA (mejorado) =====
+document.addEventListener("DOMContentLoaded", () => {
+  const addBtn = document.getElementById("addCategoryBtn");
+  const input = document.getElementById("newCategoryInput");
+  const select = document.getElementById("productCategory");
+  if (addBtn && input && select) {
+    addBtn.onclick = () => {
+      const val = input.value.trim();
+      if (!val) return;
+      if (val.length < 2) {
+        UIManager.showAlert(
+          getTranslation("alertCustomCategoryShort"),
+          "danger"
+        );
+        return;
+      }
+      if (!addCustomCategory(val)) {
+        UIManager.showAlert(
+          getTranslation("alertCustomCategoryExists"),
+          "danger"
+        );
+        return;
+      }
+      input.value = "";
+      updateCategoryOptions(localStorage.getItem(LANG_KEY) || "es");
+      updateTexts(localStorage.getItem(LANG_KEY) || "es"); // Traducir placeholder
+      // Seleccionar automáticamente la nueva categoría
+      select.value = `custom_${val}`;
+      UIManager.showAlert(
+        getTranslation("alertCustomCategoryAdded"),
+        "success"
+      );
+    };
+  }
+  // Llamar al cargar la página
+  updateCategoryOptions(localStorage.getItem(LANG_KEY) || "es");
+  updateTexts(localStorage.getItem(LANG_KEY) || "es");
+});
+
+// Llamar también después de iniciar sesión y al cambiar idioma
+function showMainContent() {
+  hideLoginModal();
+  elements.mainContent.classList.remove("hidden");
+  elements.userInfo.classList.remove("hidden");
+  elements.currentUserSpan.textContent = currentUser;
+  loadUserData();
+  updateHelpButtonVisibility();
+  updateCategoryOptions(localStorage.getItem(LANG_KEY) || "es");
+}
+function loadUserData() {
+  try {
+    products = ProductManager.getUserProducts();
+    UIManager.renderProducts();
+    updateCategoryOptions(localStorage.getItem(LANG_KEY) || "es");
+    if (products.length === 0) {
+      setTimeout(() => {
+        UIManager.showAlert(
+          getTranslation("alertWelcome", { user: currentUser }),
+          "success"
+        );
+      }, 500);
+    }
+  } catch (error) {
+    console.error("Error al cargar datos del usuario:", error);
+    UIManager.showAlert(getTranslation("alertProductError"), "danger");
+  }
+}
+document.getElementById("langSelector").addEventListener("change", (e) => {
+  setLang(e.target.value);
+  if (typeof UIManager !== "undefined" && UIManager.renderProducts) {
+    UIManager.renderProducts();
+  }
+  updateCategoryOptions(e.target.value);
+});
